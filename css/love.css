@@ -1,0 +1,39 @@
+.heart {
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    position: relative;
+    background-color: red;
+    transform: rotate(-45deg);
+    margin-left: 0.2em; /* 讓愛心與文字保持間距 */
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -0.25em;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 0.25em;
+}
+
+/* 加上動畫：心跳+閃爍 */
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1) rotate(-45deg); }
+    50% { transform: scale(1.2) rotate(-45deg); }
+}
+
+.heart {
+    animation: heartbeat 1s infinite;
+}
