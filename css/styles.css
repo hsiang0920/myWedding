@@ -11036,3 +11036,36 @@ header.masthead h1, header.masthead .h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
+
+.scroll-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ffcc00;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.scroll-button:hover {
+  background-color: #ffaa00;
+  transform: scale(1.1);
+}
+
+/* 桌機：隱藏不必要的換行 */
+@media (min-width: 1025px) {
+  .mobile-br {
+      display: none;
+  }
+}
+
+/* 平板與手機：保持換行 */
+@media (max-width: 1024px) {
+  .mobile-br {
+      display: inline;
+  }
+}

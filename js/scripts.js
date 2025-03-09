@@ -58,6 +58,58 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+const emailInput = document.getElementById("email");
+const suggestionsList = document.getElementById("suggestions");
+
+const domains = ["gmail.com", "yahoo.com.tw", "outlook.com", "icloud.com"];
+
+emailInput.addEventListener("input", function() {
+    const value = emailInput.value;
+    if (value.includes("@")) {
+        const [localPart, domainPart] = value.split("@");
+        suggestionsList.innerHTML = ""; // 清空建議列表
+
+        if (domainPart === "") {
+            domains.forEach(domain => {
+                const suggestionItem = document.createElement("li");
+                suggestionItem.textContent = `${localPart}@${domain}`;
+                suggestionItem.onclick = () => {
+                    emailInput.focus();
+                    emailInput.value = suggestionItem.textContent;
+                    suggestionsList.innerHTML = "";
+                    emailInput.blur();
+
+                };
+                suggestionsList.appendChild(suggestionItem);
+            });
+        }
+
+    } else {
+        suggestionsList.innerHTML = ""; // 如果沒有 @，不顯示建議
+    }
+});
+
+// function detectDevice() {
+//     const width = window.innerWidth;
+
+//     if (width <= 767) {
+//         // console.log("使用者是手機");
+//         document.body.classList.add("mobile");
+//     } else if (width >= 768 && width <= 1024) {
+//         // console.log("使用者是平板");
+//         document.body.classList.add("tablet");
+//     } else {
+//         // console.log("使用者是桌機");
+//         document.body.classList.add("desktop");
+//     }
+// }
+
+// // 當頁面載入時執行
+// window.onload = detectDevice;
+// // 當視窗大小改變時也執行
+// window.onresize = detectDevice;
+
+
 function turnAttend(){
     let attend = $("#attend").val();
     if(attend === '1'){
