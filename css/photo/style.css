@@ -1476,8 +1476,7 @@ textarea:focus {
     transition: all 0.5s;
 }
 .ast_glr_overlay a:hover{
-    border: 1px solid #ff0000;
-    /* TODO 這是選著的 小莓改 */
+    border: 1px solid 	#84C1FF;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -1488,8 +1487,7 @@ textarea:focus {
     width: 50px;
     height: 30px;
     margin: 5px 5px;
-    background: #ff00dd;
-    /* TODO 這是空著的 小莓改 */
+    background: #FFD9EC;
     border-radius: 0px;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -1499,7 +1497,7 @@ textarea:focus {
 }
 .wd_gallery_slider .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
     border: 1px solid #f07677;   
-	background: #ff0000;
+	background: #FFBB77;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;

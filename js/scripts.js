@@ -236,7 +236,7 @@ $('#sendButton').on('click', function () {
             text: "要填寫EMAIL才收的到信唷!",
             icon: "info"
         })
-    } else if (!$("#mailCheck").hasClass("d-none")) {
+    } else if (!$("#mailCheck").hasClass("d-none") && ['2', '4'].includes($("#inviteSelect").val()) && $("#attend").val() === '1') {
         $("#contactForm :input, #contactForm button").prop("disabled", false);
         Swal.fire({
             title: "提醒您",
@@ -274,6 +274,9 @@ function sendGoogle() {
                 text: "如果有更改需求，請與我們聯絡，謝謝您的回答!",
                 icon: "success"
             })
+            $('html, body').animate({
+                scrollTop: $('#place').offset().top
+            }, 800); 
             
         })
         .catch(error => {

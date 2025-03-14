@@ -2150,7 +2150,7 @@ textarea.form-control-lg {
 }
 
 .portfolio{
-  background: linear-gradient(to bottom, rgba(230, 195, 195, 1) 0%, rgba(230, 195, 195, 1) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), url("../assets/img/photoBG.webp");
   background-size: cover; /* 或 contain */
   background-position: center;
   background-repeat: no-repeat;
@@ -2162,6 +2162,15 @@ textarea.form-control-lg {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.place h2, .place p {
+  font-family: "Kiwi Maru", serif;
+}
+
+.hotelLink {
+  color: blue !important; /* 強制變藍色 */
+  text-decoration: underline !important; /* 強制顯示底線 */
+} 
 
 .form-select {
   display: block;
