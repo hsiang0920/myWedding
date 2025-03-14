@@ -422,17 +422,16 @@ textarea:focus {
 	width:100%;
 	margin:10px 0px;
 	font-size:40px;
-	font-family: 'Lora', serif;
+	/* font-family: 'Lora', serif; */
 }
-.wd_heading h4{
+/* .wd_heading h4{
 	float:left;
 	width:100%;
 	margin:0px;
 	font-size:18px;
 	color:#f07677;
-    /*TODO 小莓改 */
 	font-family: 'Lora', serif;
-}
+} */
 .wd_heading img{
 	display:inline-block;
 }
