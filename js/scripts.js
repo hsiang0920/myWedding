@@ -244,11 +244,11 @@ $('#sendButton').on('click', function () {
             icon: "info"
         })
     } else {
-        sendGoogle();
+        sendGoogle($("#attend").val() === '1');
     }
 })
 
-function sendGoogle() {
+function sendGoogle(up) {
     fetch("https://script.google.com/macros/s/AKfycbwS3YoJf_PX-BIYyq6By36uHUyGNpfCJITh38nPQrvv4GMHNeM5_A64xnaADqbkLrPn/exec", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -274,9 +274,15 @@ function sendGoogle() {
                 text: "如果有更改需求，請與我們聯絡，謝謝您的回答!",
                 icon: "success"
             })
-            $('html, body').animate({
-                scrollTop: $('#place').offset().top
-            }, 800); 
+            if(up){
+                $('html, body').animate({
+                    scrollTop: $('#place').offset().top
+                }, 800); 
+            }else{
+                $('html, body').animate({
+                    scrollTop: $('#page-top').offset().top
+                }, 800); 
+            }
             
         })
         .catch(error => {
